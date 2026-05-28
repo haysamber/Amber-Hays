@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Get In Touch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Contact</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                 <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <main>
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Interested in hiring? Want to collaborate? Just curious about her craft? Amber would love to hear from you!</p>
+
+            <div class="contact-grid">
+                    <div class="contact-info-box">
+                        <h3>Contact Information</h3>
+                        
+                        <p>
+                            Email: <a href="mailto:haysamber1@gmail.com">haysamber1@gmail.com</a>
+                        </p>
+
+                        <p>
+                            Phone: 520-873-8763
+                        </p>
+
+                        <h3>Follow Amber's Work</h3>
+                        <p>
+                            <a href="https://www.instagram.com/smt_aah/">Instagram</a><br>
+                            <a href="https://www.linkedin.com/in/amber-hays-7142b827a/">LinkedIn</a><br>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </main>
+
+    
+    <footer class="footer">
+        <p>&copy; 2026 Amber Hays Portfolio. All rights reserved.</p>
+        <p>Created by Amber Hays herself in Visual Studio Code</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            
+            
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
