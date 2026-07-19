@@ -322,6 +322,13 @@
             item.style.cursor = 'pointer';
 
             const openItemModal = (type) => openModal(item, type);
+            const links = item.querySelectorAll('a');
+
+            links.forEach((link) => {
+                link.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                });
+            });
 
             if (image) {
                 image.addEventListener('click', (event) => {
@@ -337,11 +344,17 @@
                 });
             }
 
-            item.addEventListener('click', () => {
+            item.addEventListener('click', (event) => {
+                if (event.target.closest('a')) {
+                    return;
+                }
                 openItemModal(video ? 'video' : 'image');
             });
 
             item.addEventListener('keydown', (event) => {
+                if (event.target.closest('a')) {
+                    return;
+                }
                 if (event.key === 'Enter' || event.key === ' ') {
                     event.preventDefault();
                     openItemModal(video ? 'video' : 'image');
