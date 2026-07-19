@@ -663,13 +663,59 @@ button:hover {
     }
 
     .nav-menu {
+        display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem 1rem;
+        gap: 0.45rem 0.9rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu li {
+        display: inline-flex;
+    }
+
+    .nav-menu a {
+        font-size: 0.95rem;
+        line-height: 1.2;
     }
 
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 1.2;
+    }
+
+    .container {
+        padding: 24px 16px;
+    }
+
+    .about-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        margin: 0;
+    }
+
+    .about-image {
+        width: min(100%, 320px);
+        height: auto;
+        max-height: 420px;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .about-text-column {
+        width: 100%;
+    }
+
+    .about-text-column h1 {
+        font-size: 1.7rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .hero {
