@@ -1,7 +1,11 @@
-general {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
@@ -9,6 +13,13 @@ body {
     line-height: 1.6;
     color: #000000;
     background-color: #d6d2d9;
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 .navbar {
@@ -759,7 +770,7 @@ button:hover {
         padding: 1.5rem;
     }
 
-    .modal-info {
+   .modal-info {
         padding-right: 0;
     }
 
@@ -767,4 +778,27 @@ button:hover {
         right: 1rem;
         top: 0.5rem;
     }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .contact-info-box {
+        padding: 1.5rem;
+    }
+
+    .portfolio-grid,
+    .clean-portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .services-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
+
