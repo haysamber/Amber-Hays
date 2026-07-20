@@ -268,7 +268,11 @@
             if (imageContainer) {
                 const overlay = document.createElement('div');
                 overlay.className = 'portfolio-card-caption';
-                overlay.innerHTML = `<span>${title}</span><small>${medium}</small>`;
+                const cardLinks = Array.from(item.querySelectorAll('.portfolio-item-content a'));
+                const linkMarkup = cardLinks.length
+                    ? cardLinks.map((link) => `<a href="${link.getAttribute('href') || '#'}" target="${link.getAttribute('target') || '_self'}" rel="noopener noreferrer">${link.textContent.trim()}</a>`).join('')
+                    : '';
+                overlay.innerHTML = `<span>${title}</span><small>${medium}</small>${linkMarkup}`;
                 imageContainer.appendChild(overlay);
             }
 

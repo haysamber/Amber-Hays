@@ -486,7 +486,7 @@ button:hover {
     z-index: 2;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.88));
     color: #f8f6f8;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .portfolio-card-caption span {
@@ -504,6 +504,21 @@ button:hover {
     font-size: 0.8rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+}
+
+.portfolio-card-caption a {
+    display: inline-block;
+    margin-top: 0.6rem;
+    color: #d6d2d9;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
+}
+
+.portfolio-card-caption a:hover,
+.portfolio-card-caption a:focus-visible {
+    color: #ffffff;
 }
 
 .clean-portfolio-grid .portfolio-item-content {
