@@ -680,6 +680,25 @@ button:hover {
     margin-top: auto;
 }
 
+.modal-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+}
+
+.modal-link-list a {
+    color: #711E50;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.16rem;
+}
+
+.modal-link-list a:hover,
+.modal-link-list a:focus-visible {
+    color: #3d2624;
+}
+
 /* Responsive layout adjustments */
 @media (max-width: 768px) {
     .nav-container {
