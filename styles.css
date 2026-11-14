@@ -828,7 +828,7 @@ button:hover {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
-
+j
     .services-table {
         display: block;
         overflow-x: auto;
@@ -836,3 +836,36 @@ button:hover {
     }
 }
 
+/* journal */
+
+.journal {
+  max-width: 800px;
+  margin: 0rem auto;
+  padding: 0rem;
+}
+
+#book {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 800 / 550;
+  transition: transform 0.4s ease;
+}
+
+#book img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.journal-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0rem;
+  margin-top: 1rem;
+}
+
+.journal-controls button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

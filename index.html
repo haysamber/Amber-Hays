@@ -37,6 +37,79 @@
                 <h1>UX/UI and Interactive Design</h1>
             </div>
         </section>
+        <div style="height: 2rem;"></div>
+        <div class="journal">
+    <div id="book">
+        <img id="leftPage" alt="Journal left page">
+        <img id="rightPage" alt="Journal right page">
+    </div>
+</div>
+
+<script>
+  const pages = [
+    "Notebookpages/Notebook_cover.png",
+    "Notebookpages/N_0.png",
+    "Notebookpages/N_1.png",
+    "Notebookpages/N_2.png",
+    "Notebookpages/N_3.png",
+    "Notebookpages/N_5.png",
+    "Notebookpages/N_4.png",
+    "Notebookpages/N_6.png",
+    "Notebookpages/N_7.png",
+    "Notebookpages/N_8.png",
+    "Notebookpages/N_9.png",
+    "Notebookpages/N_10.png",
+    "Notebookpages/N_11.png",
+    "Notebookpages/back_cover.png"
+  ];
+
+  const book = document.getElementById("book");
+  const leftEl = document.getElementById("leftPage");
+  const rightEl = document.getElementById("rightPage");
+
+const interiorCount = pages.length - 2;
+const last = Math.floor(interiorCount / 2) + 1;
+let spread = 0;
+
+function setPage(el, src) {
+  if (src) {
+    el.src = src;
+    el.style.visibility = "visible";
+  } else {
+    el.style.visibility = "hidden";
+  }
+}
+
+function render() {
+  let leftSrc = null;
+  let rightSrc = null;
+
+  if (spread === 0) {
+    rightSrc = pages[0];                  // front cover alone
+  } else if (spread === last) {
+    leftSrc = pages[pages.length - 1];    // back cover alone
+  } else {
+    leftSrc = pages[spread * 2 - 1];
+    rightSrc = pages[spread * 2];
+  }
+
+  setPage(leftEl, leftSrc);
+  setPage(rightEl, rightSrc);
+
+  // slide the lone cover to the middle of the book area
+  if (spread === 0) book.style.transform = "translateX(-25%)";
+  else if (spread === last) book.style.transform = "translateX(25%)";
+  else book.style.transform = "none";
+}
+
+function next() { if (spread < last) { spread++; render(); } }
+function prev() { if (spread > 0) { spread--; render(); } }
+
+rightEl.addEventListener("click", next);
+leftEl.addEventListener("click", prev);
+
+render();
+</script>
 
         <section class="container">
             <section class="intro-section">
