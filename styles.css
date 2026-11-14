@@ -847,12 +847,12 @@ j
 #book {
   display: flex;
   width: 100%;
-  aspect-ratio: 800 / 550;
+  aspect-ratio: 700 / 550;
   transition: transform 0.4s ease;
 }
 
 #book img {
-  width: 50%;
+  width: 55%;
   height: 100%;
   object-fit: cover;
   cursor: pointer;
@@ -863,9 +863,4 @@ j
   justify-content: center;
   gap: 0rem;
   margin-top: 1rem;
-}
-
-.journal-controls button:disabled {
-  opacity: 0.4;
-  cursor: default;
 }
